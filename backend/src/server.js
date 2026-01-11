@@ -29,6 +29,9 @@ app.use((req, res, next) => {
   next();
 });
 
+// Serve static files (add-in UI)
+app.use(express.static('public'));
+
 // Health check endpoint
 app.get('/health', (req, res) => {
   res.json({

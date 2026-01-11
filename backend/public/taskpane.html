@@ -1,0 +1,144 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Inbox Pause</title><link rel="stylesheet" href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/11.0.0/css/fabric.min.css"><style>body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 20px;
+      margin: 0;
+      background-color: #f3f2f1;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .header h1 {
+      font-size: 24px;
+      font-weight: 600;
+      color: #323130;
+      margin: 0 0 10px 0;
+    }
+
+    .status-section {
+      background: white;
+      border-radius: 4px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .status-indicator {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 15px;
+    }
+
+    .status-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      margin-right: 8px;
+    }
+
+    .status-dot.paused {
+      background-color: #d13438;
+    }
+
+    .status-dot.active {
+      background-color: #107c10;
+    }
+
+    .status-text {
+      font-size: 16px;
+      font-weight: 600;
+      color: #323130;
+    }
+
+    .pause-count {
+      text-align: center;
+      font-size: 14px;
+      color: #605e5c;
+      margin-top: 10px;
+    }
+
+    .toggle-button {
+      width: 100%;
+      padding: 12px 24px;
+      font-size: 16px;
+      font-weight: 600;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .toggle-button.pause {
+      background-color: #d13438;
+      color: white;
+    }
+
+    .toggle-button.pause:hover {
+      background-color: #a4262c;
+    }
+
+    .toggle-button.resume {
+      background-color: #107c10;
+      color: white;
+    }
+
+    .toggle-button.resume:hover {
+      background-color: #0b5a08;
+    }
+
+    .toggle-button:disabled {
+      background-color: #a19f9d;
+      cursor: not-allowed;
+    }
+
+    .loading {
+      text-align: center;
+      padding: 40px;
+    }
+
+    .spinner {
+      border: 3px solid #f3f2f1;
+      border-top: 3px solid #0078d4;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 1s linear infinite;
+      margin: 0 auto;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .error {
+      background-color: #fde7e9;
+      color: #a4262c;
+      padding: 12px;
+      border-radius: 4px;
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+
+    .info {
+      font-size: 13px;
+      color: #605e5c;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    #app {
+      display: none;
+    }
+
+    #app.ready {
+      display: block;
+    }</style><script defer="defer" src="taskpane.js"></script></head><body><div class="container"><div id="loading" class="loading"><div class="spinner"></div><p>Initializing...</p></div><div id="app"><div class="header"><h1>Inbox Pause</h1></div><div id="error-message" class="error" style="display: none;"></div><div class="status-section"><div class="status-indicator"><span id="status-dot" class="status-dot active"></span> <span id="status-text" class="status-text">Inbox is active</span></div><div id="pause-count" class="pause-count">0 emails paused</div></div><button id="toggle-button" class="toggle-button pause">Pause Inbox</button><div class="info">When paused, incoming emails are moved to the "Paused Emails" folder</div></div></div><script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script></body></html>

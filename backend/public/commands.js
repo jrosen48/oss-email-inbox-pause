@@ -1,0 +1,2 @@
+Office.onReady(function(){console.log("Commands loaded")}),"undefined"!=typeof Office&&Office.actions.associate("openTaskPane",function(e){Office.context.ui.displayDialogAsync(window.location.origin+"/taskpane.html",{height:60,width:30},function(e){e.status===Office.AsyncResultStatus.Failed&&console.error("Failed to open task pane:",e.error.message)}),e.completed()});
+//# sourceMappingURL=commands.js.map

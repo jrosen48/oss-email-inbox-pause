@@ -8,7 +8,10 @@
       "Bash(git branch:*)",
       "Bash(git push:*)",
       "Bash(ls:*)",
-      "Bash(openssl rand:*)"
+      "Bash(openssl rand:*)",
+      "WebFetch(domain:oss-email-inbox-pause-production.up.railway.app)",
+      "Bash(npm install)",
+      "Bash(npm run build:*)"
     ]
   }
 }

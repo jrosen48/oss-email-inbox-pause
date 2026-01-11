@@ -17,7 +17,7 @@
   "license": "MIT",
   "dependencies": {
     "@azure/msal-browser": "^3.28.0",
-    "office-ui-fabric-core": "^11.1.1"
+    "@fluentui/react": "^8.120.0"
   },
   "devDependencies": {
     "@babel/core": "^7.26.0",
