@@ -3,9 +3,9 @@ import * as msal from '@azure/msal-browser';
 // Configuration
 const CONFIG = {
   backendUrl: process.env.NODE_ENV === 'production'
-    ? 'https://your-production-backend.com'
+    ? 'https://oss-email-inbox-pause-production.up.railway.app'
     : 'http://localhost:3000',
-  azureClientId: 'YOUR_AZURE_CLIENT_ID_HERE', // Replace with your Azure AD app ID
+  azureClientId: 'a6fc8ff3-d18b-4d22-86a2-ed7cf95ec535',
   scopes: ['Mail.ReadWrite', 'Mail.ReadWrite.Shared']
 };
 

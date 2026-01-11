@@ -13,12 +13,12 @@
 
   <DisplayName DefaultValue="Inbox Pause"/>
   <Description DefaultValue="Pause your inbox to focus - open source alternative to Boomerang"/>
-  <IconUrl DefaultValue="https://localhost:3001/assets/icon-64.png"/>
-  <HighResolutionIconUrl DefaultValue="https://localhost:3001/assets/icon-128.png"/>
-  <SupportUrl DefaultValue="https://github.com/yourusername/oss-email-inbox-pause"/>
+  <IconUrl DefaultValue="https://oss-email-inbox-pause-production.up.railway.app/assets/icon-64.png"/>
+  <HighResolutionIconUrl DefaultValue="https://oss-email-inbox-pause-production.up.railway.app/assets/icon-128.png"/>
+  <SupportUrl DefaultValue="https://github.com/jrosen48/oss-email-inbox-pause"/>
 
   <AppDomains>
-    <AppDomain>https://localhost:3001</AppDomain>
+    <AppDomain>https://oss-email-inbox-pause-production.up.railway.app</AppDomain>
   </AppDomains>
 
   <Hosts>
@@ -34,7 +34,7 @@
   <FormSettings>
     <Form xsi:type="ItemRead">
       <DesktopSettings>
-        <SourceLocation DefaultValue="https://localhost:3001/taskpane.html"/>
+        <SourceLocation DefaultValue="https://oss-email-inbox-pause-production.up.railway.app/taskpane.html"/>
         <RequestedHeight>250</RequestedHeight>
       </DesktopSettings>
     </Form>
@@ -89,13 +89,13 @@
 
     <Resources>
       <bt:Images>
-        <bt:Image id="Icon.16x16" DefaultValue="https://localhost:3001/assets/icon-16.png"/>
-        <bt:Image id="Icon.32x32" DefaultValue="https://localhost:3001/assets/icon-32.png"/>
-        <bt:Image id="Icon.80x80" DefaultValue="https://localhost:3001/assets/icon-80.png"/>
+        <bt:Image id="Icon.16x16" DefaultValue="https://oss-email-inbox-pause-production.up.railway.app/assets/icon-16.png"/>
+        <bt:Image id="Icon.32x32" DefaultValue="https://oss-email-inbox-pause-production.up.railway.app/assets/icon-32.png"/>
+        <bt:Image id="Icon.80x80" DefaultValue="https://oss-email-inbox-pause-production.up.railway.app/assets/icon-80.png"/>
       </bt:Images>
       <bt:Urls>
-        <bt:Url id="Commands.Url" DefaultValue="https://localhost:3001/commands.html"/>
-        <bt:Url id="Taskpane.Url" DefaultValue="https://localhost:3001/taskpane.html"/>
+        <bt:Url id="Commands.Url" DefaultValue="https://oss-email-inbox-pause-production.up.railway.app/commands.html"/>
+        <bt:Url id="Taskpane.Url" DefaultValue="https://oss-email-inbox-pause-production.up.railway.app/taskpane.html"/>
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="GroupLabel" DefaultValue="Inbox Pause"/>
@@ -108,8 +108,8 @@
 
     <!-- Enable Nested App Authentication (NAA) -->
     <WebApplicationInfo>
-      <Id>YOUR_AZURE_APP_ID_HERE</Id>
-      <Resource>api://localhost:3001/YOUR_AZURE_APP_ID_HERE</Resource>
+      <Id>a6fc8ff3-d18b-4d22-86a2-ed7cf95ec535</Id>
+      <Resource>api://oss-email-inbox-pause-production.up.railway.app/a6fc8ff3-d18b-4d22-86a2-ed7cf95ec535</Resource>
       <Scopes>
         <Scope>Mail.ReadWrite</Scope>
         <Scope>Mail.ReadWrite.Shared</Scope>
