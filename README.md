@@ -10,6 +10,22 @@ An open-source alternative to Boomerang's inbox pause functionality for Outlook.
 - **Secure**: Uses Microsoft Graph API with OAuth authentication
 - **Cost-effective**: Free and open source (vs $160/year for Boomerang)
 
+## 💝 Support This Project
+
+This add-in is **100% free** and will always remain free. However, hosting costs money:
+- Database hosting: ~$5/month
+- Server hosting: ~$10/month
+- Total: ~$15-20/month for community use
+
+**Ways to help:**
+- ⭐ Star this repository
+- 💰 [Sponsor on GitHub](https://github.com/sponsors/jrosen48) (even $1/month helps!)
+- 🐛 Report bugs and suggest features
+- 📢 Share with others who might find it useful
+- 🤝 Contribute code improvements
+
+Your support keeps this project alive and free for everyone!
+
 ## Architecture
 
 - **Backend**: Node.js + Express service with Microsoft Graph webhooks

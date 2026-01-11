@@ -135,10 +135,36 @@
       margin-top: 20px;
     }
 
+    .support-link {
+      text-align: center;
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #fff4ce;
+      border-radius: 4px;
+      border: 1px solid #f7e6a2;
+    }
+
+    .support-link p {
+      margin: 0 0 8px 0;
+      font-size: 13px;
+      color: #323130;
+    }
+
+    .support-link a {
+      color: #0078d4;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .support-link a:hover {
+      text-decoration: underline;
+    }
+
     #app {
       display: none;
     }
 
     #app.ready {
       display: block;
-    }</style><script defer="defer" src="taskpane.js"></script></head><body><div class="container"><div id="loading" class="loading"><div class="spinner"></div><p>Initializing...</p></div><div id="app"><div class="header"><h1>Inbox Pause</h1></div><div id="error-message" class="error" style="display: none;"></div><div class="status-section"><div class="status-indicator"><span id="status-dot" class="status-dot active"></span> <span id="status-text" class="status-text">Inbox is active</span></div><div id="pause-count" class="pause-count">0 emails paused</div></div><button id="toggle-button" class="toggle-button pause">Pause Inbox</button><div class="info">When paused, incoming emails are moved to the "Paused Emails" folder</div></div></div><script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script></body></html>
+    }</style><script defer="defer" src="taskpane.js"></script></head><body><div class="container"><div id="loading" class="loading"><div class="spinner"></div><p>Initializing...</p></div><div id="app"><div class="header"><h1>Inbox Pause</h1></div><div id="error-message" class="error" style="display: none;"></div><div class="status-section"><div class="status-indicator"><span id="status-dot" class="status-dot active"></span> <span id="status-text" class="status-text">Inbox is active</span></div><div id="pause-count" class="pause-count">0 emails paused</div></div><button id="toggle-button" class="toggle-button pause">Pause Inbox</button><div class="info">When paused, incoming emails are moved to the "Paused Emails" folder</div><div class="support-link"><p>💝 This add-in is free and open source</p><a href="https://github.com/sponsors/jrosen48" target="_blank">Support this project →</a></div></div></div><script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script></body></html>
