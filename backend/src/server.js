@@ -3,6 +3,7 @@ const express = require('express');
 const cors = require('cors');
 const helmet = require('helmet');
 const cron = require('node-cron');
+const path = require('path');
 
 const webhookRoutes = require('./routes/webhooks');
 const apiRoutes = require('./routes/api');
@@ -33,7 +34,9 @@ app.use((req, res, next) => {
 });
 
 // Serve static files (add-in UI)
-app.use(express.static('public'));
+const publicPath = path.join(__dirname, '..', 'public');
+console.log('Serving static files from:', publicPath);
+app.use(express.static(publicPath));
 
 // Health check endpoint
 app.get('/health', (req, res) => {
