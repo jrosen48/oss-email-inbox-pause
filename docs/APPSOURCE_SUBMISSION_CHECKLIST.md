@@ -112,7 +112,7 @@ Perfect For:
 ✓ Important meetings
 ✓ Focused project time
 ✓ Email-free mornings or afternoons
-✓ Anyone who pays $160/year for Boomerang
+✓ Anyone who pays $180/year for Boomerang
 
 Privacy & Security:
 • Open source - verify the code yourself
@@ -128,7 +128,7 @@ This is a free, community-supported project. Help keep it running:
 • Source code: https://github.com/jrosen48/oss-email-inbox-pause
 
 Why This Add-in?
-Boomerang charges $160/year for inbox pause. This add-in provides the same core functionality for free, with complete transparency and privacy control.
+Boomerang charges $180/year for inbox pause. This add-in provides the same core functionality for free, with complete transparency and privacy control.
 ```
 
 ### Keywords (5-7 keywords)

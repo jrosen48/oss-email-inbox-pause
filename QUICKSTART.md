@@ -115,7 +115,7 @@ ngrok http 3000
 
 ## Cost Comparison
 
-- **Boomerang**: $160/year
+- **Boomerang**: $180/year
 - **This (self-hosted)**: $0/year (free tiers) or ~$10-20/month for production
 
 Enjoy your free inbox pause! 🎉

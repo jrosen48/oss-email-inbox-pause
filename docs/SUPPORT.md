@@ -91,7 +91,7 @@ A: Your emails remain safe in your mailbox. The "Paused" folder and all emails s
 A: Yes, but you'll need to add the add-in to each account separately.
 
 **Q: How is this different from Boomerang?**
-A: This is a free, open-source alternative to Boomerang's inbox pause feature. It has fewer features but costs $0 instead of $160/year.
+A: This is a free, open-source alternative to Boomerang's inbox pause feature. It has fewer features but costs $0 instead of $180/year.
 
 ## System Requirements
 

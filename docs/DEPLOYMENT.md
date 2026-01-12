@@ -350,7 +350,7 @@ See: https://learn.microsoft.com/en-us/office/dev/store/submit-to-appsource-via-
 - **Domain**: $10-15/year
 - **Total**: ~$10-20/month
 
-Compare to Boomerang: $160/year = $13.33/month
+Compare to Boomerang: $180/year = $15/month
 
 ## Support
 

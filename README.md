@@ -8,7 +8,7 @@ An open-source alternative to Boomerang's inbox pause functionality for Outlook.
 - **Cross-platform**: Works on Outlook Mac Desktop and Outlook Web
 - **Simple UI**: Clean toggle button directly in Outlook
 - **Secure**: Uses Microsoft Graph API with OAuth authentication
-- **Cost-effective**: Free and open source (vs $160/year for Boomerang)
+- **Cost-effective**: Free and open source (vs $180/year for Boomerang)
 
 ## 💝 Support This Project
 
