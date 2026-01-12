@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inbox Pause - Screenshot Mockups</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .mockup-container {
+            max-width: 1366px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            overflow: hidden;
+        }
+        .mockup-header {
+            background: #0078d4;
+            color: white;
+            padding: 15px 20px;
+            font-size: 14px;
+        }
+        .outlook-window {
+            display: flex;
+            height: 600px;
+        }
+        .outlook-sidebar {
+            width: 250px;
+            background: #f3f2f1;
+            border-right: 1px solid #e1dfdd;
+            padding: 20px 10px;
+        }
+        .outlook-main {
+            flex: 1;
+            background: white;
+            padding: 20px;
+        }
+        .outlook-taskpane {
+            width: 320px;
+            background: #f3f2f1;
+            border-left: 1px solid #e1dfdd;
+            padding: 20px;
+        }
+        .folder-item {
+            padding: 8px 12px;
+            margin: 4px 0;
+            border-radius: 4px;
+            font-size: 14px;
+            color: #323130;
+        }
+        .folder-item.active {
+            background: #edebe9;
+            font-weight: 600;
+        }
+        .folder-item.paused {
+            color: #d13438;
+            font-weight: 600;
+        }
+        .email-list {
+            margin-top: 20px;
+        }
+        .email-item {
+            padding: 12px;
+            border-bottom: 1px solid #edebe9;
+            cursor: pointer;
+        }
+        .email-item:hover {
+            background: #f3f2f1;
+        }
+        .email-sender {
+            font-weight: 600;
+            color: #323130;
+            margin-bottom: 4px;
+        }
+        .email-subject {
+            color: #323130;
+            margin-bottom: 2px;
+        }
+        .email-preview {
+            color: #605e5c;
+            font-size: 13px;
+        }
+
+        /* Taskpane styles - matching actual add-in */
+        .taskpane-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .taskpane-header h1 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #323130;
+            margin: 0 0 10px 0;
+        }
+        .status-section {
+            background: white;
+            border-radius: 4px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .status-indicator {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+        .status-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+        .status-dot.paused {
+            background-color: #d13438;
+        }
+        .status-dot.active {
+            background-color: #107c10;
+        }
+        .status-text {
+            font-size: 16px;
+            font-weight: 600;
+            color: #323130;
+        }
+        .pause-count {
+            text-align: center;
+            font-size: 14px;
+            color: #605e5c;
+            margin-top: 10px;
+        }
+        .toggle-button {
+            width: 100%;
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: 600;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .toggle-button.pause {
+            background-color: #d13438;
+            color: white;
+        }
+        .toggle-button.resume {
+            background-color: #107c10;
+            color: white;
+        }
+        .taskpane-info {
+            font-size: 13px;
+            color: #605e5c;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .support-link {
+            text-align: center;
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #fff4ce;
+            border-radius: 4px;
+            border: 1px solid #f7e6a2;
+        }
+        .support-link p {
+            margin: 0 0 8px 0;
+            font-size: 13px;
+        }
+        .support-link a {
+            color: #0078d4;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .instructions {
+            background: #fff4ce;
+            border: 2px solid #f7e6a2;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+        .instructions h2 {
+            margin-top: 0;
+            color: #323130;
+        }
+        .screenshot-btn {
+            background: #0078d4;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px 10px 0 0;
+        }
+        .screenshot-btn:hover {
+            background: #005a9e;
+        }
+    </style>
+</head>
+<body>
+    <div class="instructions">
+        <h2>📸 AppSource Screenshot Mockups</h2>
+        <p>These mockups show what your add-in screenshots should look like for AppSource submission.</p>
+        <p><strong>To capture:</strong></p>
+        <ul>
+            <li>Use browser screenshot tools or macOS Screenshot (Cmd+Shift+4)</li>
+            <li>Capture each mockup at 1366x768 or similar resolution</li>
+            <li>Save as PNG files in docs/screenshots/</li>
+        </ul>
+        <button class="screenshot-btn" onclick="switchToActive()">Show Active State</button>
+        <button class="screenshot-btn" onclick="switchToPaused()">Show Paused State</button>
+    </div>
+
+    <div class="mockup-container" id="mockup">
+        <div class="mockup-header">
+            📧 Microsoft Outlook - Inbox Pause Add-in Demo
+        </div>
+        <div class="outlook-window">
+            <div class="outlook-sidebar">
+                <div class="folder-item active">📥 Inbox</div>
+                <div class="folder-item">📤 Sent Items</div>
+                <div class="folder-item">📝 Drafts</div>
+                <div class="folder-item" id="pausedFolder">⏸️ Paused Emails <span id="pausedCount"></span></div>
+                <div class="folder-item">🗑️ Deleted Items</div>
+            </div>
+
+            <div class="outlook-main">
+                <h2 style="margin-top: 0; color: #323130;">Inbox</h2>
+                <div class="email-list" id="emailList">
+                    <div class="email-item">
+                        <div class="email-sender">Sarah Johnson</div>
+                        <div class="email-subject">Team Meeting Update</div>
+                        <div class="email-preview">Hi team, just wanted to confirm tomorrow's meeting...</div>
+                    </div>
+                    <div class="email-item">
+                        <div class="email-sender">Marketing Updates</div>
+                        <div class="email-subject">Monthly Newsletter - January 2026</div>
+                        <div class="email-preview">Check out this month's highlights and upcoming events...</div>
+                    </div>
+                    <div class="email-item">
+                        <div class="email-sender">IT Support</div>
+                        <div class="email-subject">Security Update Required</div>
+                        <div class="email-preview">Please update your password at your earliest convenience...</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="outlook-taskpane">
+                <div class="taskpane-header">
+                    <h1>Inbox Pause</h1>
+                </div>
+
+                <div class="status-section">
+                    <div class="status-indicator">
+                        <span id="statusDot" class="status-dot active"></span>
+                        <span id="statusText" class="status-text">Inbox is active</span>
+                    </div>
+                    <div id="pauseCount" class="pause-count">0 emails paused</div>
+                </div>
+
+                <button id="toggleButton" class="toggle-button pause">
+                    Pause Inbox
+                </button>
+
+                <div class="taskpane-info">
+                    When paused, incoming emails are moved to the "Paused Emails" folder
+                </div>
+
+                <div class="support-link">
+                    <p>💝 This add-in is free and open source</p>
+                    <a href="https://github.com/sponsors/jrosen48" target="_blank">Support this project →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function switchToPaused() {
+            document.getElementById('statusDot').className = 'status-dot paused';
+            document.getElementById('statusText').textContent = 'Inbox is paused';
+            document.getElementById('pauseCount').textContent = '5 emails paused';
+            document.getElementById('toggleButton').textContent = 'Resume Inbox';
+            document.getElementById('toggleButton').className = 'toggle-button resume';
+            document.getElementById('pausedFolder').classList.add('paused');
+            document.getElementById('pausedCount').textContent = '(5)';
+        }
+
+        function switchToActive() {
+            document.getElementById('statusDot').className = 'status-dot active';
+            document.getElementById('statusText').textContent = 'Inbox is active';
+            document.getElementById('pauseCount').textContent = '0 emails paused';
+            document.getElementById('toggleButton').textContent = 'Pause Inbox';
+            document.getElementById('toggleButton').className = 'toggle-button pause';
+            document.getElementById('pausedFolder').classList.remove('paused');
+            document.getElementById('pausedCount').textContent = '';
+        }
+    </script>
+</body>
+</html>

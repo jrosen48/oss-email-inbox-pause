@@ -11,7 +11,11 @@
       "Bash(openssl rand:*)",
       "WebFetch(domain:oss-email-inbox-pause-production.up.railway.app)",
       "Bash(npm install)",
-      "Bash(npm run build:*)"
+      "Bash(npm run build:*)",
+      "Bash(for size in 16 32 80 128)",
+      "Bash(do /opt/homebrew/bin/convert icon.svg -resize $sizex$size icon-$size.png)",
+      "Bash(done)",
+      "Bash(/opt/homebrew/bin/convert:*)"
     ]
   }
 }
